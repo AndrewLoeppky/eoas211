@@ -1,0 +1,480 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Slide 0 &#8212; EOSC 211</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/mystnb.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/jblogo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">EOSC 211</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="title_211.html">EOSC 211 -  Announcements</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Week 1</p>
+</li>
+  <li class="">
+    <a href="week01.html">W1D1: Introduction</a>
+  </li>
+  <li class="">
+    <a href="week01WS01.html">W1D1: Worksheet</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Week 2</p>
+</li>
+  <li class="">
+    <a href="lipsum.html">Filler Content</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="_sources/week02_Class1_SyntaxOverview_postclass.md"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.md</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Source interaction buttons -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <!-- #region -->
+<div class="section" id="slide-0">
+<h1>Slide 0<a class="headerlink" href="#slide-0" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Concepts for Today’s Class:
+steps in problem solving
+MATLAB syntax: underlying structure
+syntax versus semantics
+Reading:
+See course web site for details, we’ll cover material in:
+pgs 6-40			(in class)
+pgs 3-6, 75-80, 89-101	(labs)
+pgs 557-564		(general reference, will show up in classes)
+Lab:
+bring text
+Labs due at 4pm on Fridays
+TA hours, EOS-Main 203 – make sure to note which weeks these carefully!
+Friday (wks 3,4,5,6,8,9,10,11):    9:30 am – 10:30 am
+Monday (wks 7,10 only):          11:00 am – noon.
+United Launch Alliance Atlas V 411 with NASA OSIRIS-REx mission lifts off from Cape Canaveral, Sept 2016
+
+</pre></div>
+</div>
+<img src="media\week02_Class1_SyntaxOverview_postclass-slide_0-000.png">
+<!-- #endregion -->
+<!-- #region -->
+</div>
+<div class="section" id="slide-1">
+<h1>Slide 1<a class="headerlink" href="#slide-1" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Good Problem Solving Techniques
+Work in pairs and write down the steps in algorithm design (problem solving using MATLAB) mentioned in the text book (or if you didn’t get that far in the reading just write down what you think are reasonable steps)
+
+</pre></div>
+</div>
+<img src="media\week02_Class1_SyntaxOverview_postclass-slide_1-001.png">
+<!-- #endregion -->
+</div>
+<div class="section" id="slide-2">
+<h1>Slide 2<a class="headerlink" href="#slide-2" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Good Problem Solving Techniques
+We will adopt the 5-step program  (NOTE: this is more complete than the approach in the text book on page 76)
+State the problem clearly
+Describe your input and output info / data
+Write down the problem-solving procedure IN WORDS
+- pay special attention to the logic
+- if possible work the problem “by hand” for a simple set of data
+Develop a MATLAB code to do (3)
+Test your code with a variety of data or different cases
+Example:  What was the largest earthquake in the Vancouver / Vancouver Island region in the past year?
+
+</pre></div>
+</div>
+<!-- #region -->
+</div>
+<div class="section" id="slide-3">
+<h1>Slide 3<a class="headerlink" href="#slide-3" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+http://www.iris.edu/hq/audience/public/earthquakes
+http://earthquake.usgs.gov/regional/neic/
+http://earthquakescanada.nrcan.gc.ca/index-eng.php
+Goal:  find the largest earthquake in the Pacific Northwest during 08/30/2017– 08/31/2018. I have only printed out eqs w/ magnitudes larger than 4.0
+Write down input and output in words
+Give numeric value for the actual output
+3.	Write down the procedure you used to get your answer
+
+</pre></div>
+</div>
+<img src="media\week02_Class1_SyntaxOverview_postclass-slide_3-002.png">
+<!-- #endregion -->
+</div>
+<div class="section" id="slide-4">
+<h1>Slide 4<a class="headerlink" href="#slide-4" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">Finding</span> <span class="n">the</span> <span class="n">Largest</span> <span class="n">Earthquake</span>
+<span class="n">My</span> <span class="n">procedure</span> <span class="ow">or</span> <span class="n">algorithm</span><span class="p">:</span>
+<span class="n">read</span> <span class="n">magnitude</span> <span class="n">on</span> <span class="n">first</span> <span class="n">line</span><span class="p">,</span> <span class="ow">and</span> <span class="n">remember</span>
+<span class="n">read</span> <span class="n">magnitude</span> <span class="n">on</span> <span class="n">second</span> <span class="n">line</span>
+<span class="n">compare</span> <span class="k">with</span> <span class="n">first</span><span class="p">,</span> <span class="ow">and</span>
+<span class="n">remember</span> <span class="n">only</span> <span class="n">the</span> <span class="n">largest</span> <span class="n">of</span> <span class="n">the</span> <span class="mi">2</span>
+<span class="n">read</span> <span class="n">magnitude</span> <span class="n">on</span> <span class="n">the</span> <span class="nb">next</span> <span class="n">line</span>
+<span class="n">compare</span> <span class="k">with</span> <span class="n">largest</span><span class="p">,</span> <span class="ow">and</span>
+<span class="n">remember</span> <span class="n">the</span> <span class="n">largest</span> <span class="n">of</span> <span class="n">these</span> <span class="n">two</span>
+<span class="n">repeat</span> <span class="n">steps</span> <span class="mi">5</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="n">until</span> <span class="n">reach</span> <span class="n">end</span> <span class="n">of</span> <span class="nb">list</span>
+<span class="n">tell</span> <span class="n">you</span> <span class="n">my</span> <span class="n">largest</span> <span class="n">magnitude</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="slide-5">
+<h1>Slide 5<a class="headerlink" href="#slide-5" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Finding the Largest Earthquake
+My procedure or algorithm:
+read mag1
+read mag2
+Is mag2 &gt; mag1  ?
+YES:  biggest = mag2
+NO:   biggest = mag1
+read next_mag
+Is next_mag &gt; biggest  ?
+YES:  biggest = next_mag
+NO:    don’t need to update biggest
+write out biggest
+how do we turn this into matlab code?
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="slide-6">
+<h1>Slide 6<a class="headerlink" href="#slide-6" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">MATLAB</span><span class="p">:</span>  <span class="n">Programming</span> <span class="n">elements</span> <span class="p">(</span><span class="n">overview</span><span class="p">)</span>
+<span class="n">The</span> <span class="n">structure</span> <span class="n">of</span> <span class="n">MATLAB</span>
+<span class="n">Lexical</span> <span class="n">Elements</span>
+<span class="o">-</span> <span class="n">building</span> <span class="n">blocks</span>
+<span class="n">Syntax</span>
+<span class="o">-</span> <span class="nb">set</span> <span class="n">of</span> <span class="n">rules</span> <span class="n">to</span> <span class="n">combine</span> <span class="n">lexical</span> <span class="n">elements</span> <span class="n">into</span> <span class="n">legitimate</span> <span class="n">constructs</span>
+<span class="n">Programming</span> <span class="n">language</span>
+<span class="n">names</span><span class="p">,</span> <span class="n">operators</span><span class="p">,</span> <span class="n">special</span> <span class="n">characters</span>
+<span class="n">Programming</span> <span class="n">language</span>
+<span class="n">how</span> <span class="n">to</span> <span class="n">build</span> <span class="n">expressions</span><span class="p">,</span> <span class="n">statements</span><span class="p">,</span>
+<span class="n">functions</span> <span class="o">&amp;</span> <span class="n">programs</span>
+<span class="n">Human</span> <span class="n">Language</span>
+<span class="n">words</span><span class="p">,</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">punctuation</span>
+<span class="n">Human</span> <span class="n">Language</span>
+<span class="n">how</span> <span class="n">to</span> <span class="n">build</span> <span class="n">sentences</span> <span class="o">&amp;</span> <span class="n">paragraphs</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="slide-7">
+<h1>Slide 7<a class="headerlink" href="#slide-7" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">Lexical</span> <span class="n">Elements</span> <span class="p">(</span><span class="n">Building</span> <span class="n">Blocks</span><span class="p">)</span>
+<span class="n">Names</span>
+<span class="n">Variable</span> <span class="n">names</span><span class="p">:</span>
+<span class="n">Reserved</span> <span class="n">words</span><span class="p">:</span>
+<span class="n">Function</span> <span class="n">names</span><span class="p">:</span>
+<span class="mf">2.</span>	<span class="n">Operators</span>
+<span class="n">Logical</span><span class="p">:</span>
+<span class="n">Arithmetic</span><span class="p">:</span>
+<span class="n">Relational</span><span class="p">:</span>
+<span class="n">sequences</span> <span class="n">of</span> <span class="n">code</span><span class="p">;</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">sin</span>
+<span class="n">have</span> <span class="n">a</span> <span class="n">special</span> <span class="n">meaning</span><span class="p">,</span> <span class="n">cannot</span> <span class="n">be</span> <span class="n">redefined</span><span class="p">;</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="k">for</span>
+<span class="n">store</span> <span class="n">data</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span> <span class="n">our</span> <span class="n">user</span><span class="o">-</span><span class="n">defined</span> <span class="n">variable</span><span class="p">:</span> <span class="n">mag1</span>
+<span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span>   <span class="o">&amp;&amp;</span>			<span class="n">text</span> <span class="n">p</span><span class="o">.</span> <span class="mi">20</span>
+<span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span>   <span class="o">+</span><span class="p">,</span> <span class="o">-</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="o">/</span>		<span class="n">text</span> <span class="n">p</span><span class="o">.</span> <span class="mi">12</span><span class="o">-</span><span class="mi">13</span>
+<span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span>   <span class="o">&gt;</span><span class="p">,</span> <span class="o">&gt;=</span><span class="p">,</span> <span class="o">&lt;</span><span class="p">,</span> <span class="o">&lt;=</span>		<span class="n">text</span> <span class="n">p</span><span class="o">.</span> <span class="mi">19</span>
+<span class="n">Special</span> <span class="n">characters</span><span class="p">:</span>	<span class="n">keyboard</span> <span class="n">characters</span> <span class="k">with</span> <span class="n">special</span> <span class="n">meaning</span> <span class="ow">in</span> <span class="n">MATLAB</span><span class="o">.</span>
+<span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span>  <span class="p">;</span>    <span class="p">{}</span>    <span class="p">()</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="slide-8">
+<h1>Slide 8<a class="headerlink" href="#slide-8" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">Lexical</span> <span class="n">Elements</span> <span class="p">(</span><span class="n">Building</span> <span class="n">Blocks</span><span class="p">)</span>
+<span class="n">Names</span><span class="p">:</span>		<span class="n">variable</span> <span class="n">names</span><span class="p">,</span> <span class="n">reserved</span> <span class="n">words</span><span class="p">,</span> <span class="n">function</span> <span class="n">names</span>
+<span class="mf">2.</span>	<span class="n">Operators</span><span class="p">:</span>		<span class="n">logical</span><span class="p">,</span> <span class="n">arithmetic</span><span class="p">,</span> <span class="n">relational</span>
+<span class="n">Special</span> <span class="n">characters</span><span class="p">:</span>	<span class="n">keyboard</span> <span class="n">characters</span> <span class="k">with</span> <span class="n">special</span> <span class="n">meaning</span> <span class="ow">in</span> <span class="n">MATLAB</span><span class="o">.</span>
+<span class="n">mag1</span> <span class="o">=</span><span class="mf">4.9</span><span class="p">;</span>
+<span class="n">mag2</span> <span class="o">=</span><span class="mf">5.3</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">mag1</span> <span class="o">&gt;</span> <span class="n">mag2</span><span class="p">)</span>
+<span class="n">max_mag</span> <span class="o">=</span> <span class="n">mag1</span><span class="p">;</span>
+<span class="k">else</span>
+<span class="n">max_mag</span> <span class="o">=</span> <span class="n">mag2</span><span class="p">;</span>
+<span class="n">end</span>
+<span class="n">Worksheet</span> <span class="n">Part</span> <span class="n">D</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="slide-9">
+<h1>Slide 9<a class="headerlink" href="#slide-9" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Lexical Elements (Building Blocks)
+How are variables assigned in MATLAB?
+&gt;&gt; mag1 = 4.9
+What does this do?
+Creates a space in memory
+Gives the space the name “mag1”.  We call mag1 a VARIABLE
+Stores the value 4.9 in that space (variable)
+Echoes back this information
+The prompt reappears
+&gt;&gt; mag1 = 3.7 		overwrites “4.9” with “3.7”
+Note
+“=“ does not mean = in the mathematical sense.  Instead, it means “assign the number on the RHS to the variable on the LHS”
+We can do math on the RHS, mixing numbers and variables
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="slide-10">
+<h1>Slide 10<a class="headerlink" href="#slide-10" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Syntax
+Lexical elements are combined using the set of rules known as “syntax”
+I cdnuolt blveiee that I cluod aulacity uesdnatnrd what I was rdgnieg.
+Important difference between human and programming languages is tolerance to syntax errors versus tolerance to spelling/grammar errors
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="slide-11">
+<h1>Slide 11<a class="headerlink" href="#slide-11" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Examples of Syntax Errors
+Usually / often your code will not run if you make a syntax error:
+&gt;&gt; x=10;				defined my variable x and assigned it a value of 10
+&gt;&gt; y=cos(x			trying to compute cos(x) and assign it to variable y
+??? y=cos(x			Correct: y = cos(x)
+|
+Error: Expression or statement is incorrect--possibly unbalanced (, {, or [.
+&gt;&gt; y=2x				trying to compute “2 times x” and assign it to “y”
+??? y=2x				Correct: y = 2*x (spaces around = don’t matter)
+|
+Error: Unexpected MATLAB expression.
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="slide-12">
+<h1>Slide 12<a class="headerlink" href="#slide-12" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Syntax versus Semantics
+When a program doesn’t work this can happen because:
+SYNTAX is incorrect - e.g.,
+&gt;&gt; distance = speed *
+- multiplication (*) needs numbers or variables on both sides of *
+b)	SEMANTICS are incorrect
+&gt;&gt; distance = speed / time
+- may or may not run but will certainly give you the wrong answer!!
+The program you wrote is not the program you meant to write!
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="slide-13">
+<h1>Slide 13<a class="headerlink" href="#slide-13" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Example of Semantics Error
+mag1 =4.9;
+mag2 =5.3;
+if (mag1 &lt; mag2)
+max_mag = mag1;
+else
+max_mag = mag2;
+end
+Here’s a code snippet for finding the largest of 2 earthquakes.
+What is wrong?
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="slide-14">
+<h1>Slide 14<a class="headerlink" href="#slide-14" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Wrap Up
+Steps in problem solving
+1. state problem clearly
+2. define the input/output
+3. write down algorithm by hand: ie., think the problem through
+4. code in MATLAB
+5. test, test, test…
+Underlying structure of MATLAB syntax
+- building blocks: names, operators, special characters
+Syntax versus semantics
+- syntax errors are about bugs in step 4 above
+- semantics errors usually result from skipping step 3
+
+</pre></div>
+</div>
+<!-- #region -->
+</div>
+<div class="section" id="slide-15">
+<h1>Slide 15<a class="headerlink" href="#slide-15" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">Lab</span> <span class="n">Overview</span>
+<span class="n">become</span> <span class="n">familiar</span> <span class="k">with</span> <span class="n">MATLAB</span> <span class="n">environment</span>
+<span class="n">load</span><span class="p">,</span> <span class="n">plot</span> <span class="ow">and</span> <span class="n">save</span> <span class="n">data</span>
+<span class="k">try</span> <span class="n">some</span> <span class="n">simple</span> <span class="n">operations</span>
+<span class="n">write</span> <span class="n">MATLAB</span> <span class="n">scripts</span>
+<span class="n">a</span><span class="p">)</span> <span class="n">pair</span> <span class="n">programming</span>
+<span class="n">b</span><span class="p">)</span> <span class="n">need</span> <span class="n">either</span> <span class="n">an</span> <span class="n">account</span><span class="p">,</span> <span class="ow">or</span> <span class="n">your</span> <span class="n">own</span> <span class="n">version</span> <span class="n">of</span> <span class="n">MATLAB</span>
+<span class="n">c</span><span class="p">)</span> <span class="n">turn</span> <span class="ow">in</span> <span class="n">requested</span> <span class="n">file</span> <span class="n">on</span> <span class="n">Canvas</span> <span class="p">(</span><span class="ow">not</span> <span class="n">graded</span> <span class="n">but</span> <span class="n">will</span> <span class="n">use</span> <span class="n">later</span> <span class="ow">in</span> <span class="n">term</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<img src="media\week02_Class1_SyntaxOverview_postclass-slide_15-003.png">
+<img src="media\week02_Class1_SyntaxOverview_postclass-slide_15-004.png">
+<!-- #endregion -->
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By UBC<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>
