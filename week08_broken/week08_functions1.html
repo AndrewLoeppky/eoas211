@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Slide 0 &#8212; EOSC 211</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/jblogo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">EOSC 211</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../_sources/week08_broken/week08_functions1.md"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.md</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Source interaction buttons -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="slide-0">
+<h1>Slide 0<a class="headerlink" href="#slide-0" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Week 8:  Procedural Abstraction
+Writing and Using functions
+Reading:
+Text book p. 101-113, 193-207, 341-346
+I will provide minimal additional notes
+Concepts for Today’s Class:
+defining functions
+using a function
+calling a function, returning from a function, help
+pass-by-value versus pass-by-reference
+scope &amp; sub-functions
+Lab:  		writing a function
+Assignment: 	Part 2 due Wed. Nov 7th, 4pm.
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="slide-1">
+<h1>Slide 1<a class="headerlink" href="#slide-1" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">Function</span> <span class="n">Definition</span> <span class="n">Line</span>
+<span class="n">function</span> <span class="n">y</span> <span class="o">=</span> <span class="n">poly3</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">function</span> <span class="n">name</span>
+<span class="nb">input</span> <span class="n">arguments</span>
+<span class="n">output</span> <span class="n">arguments</span>
+<span class="n">function</span> <span class="p">[</span><span class="n">volsum</span><span class="p">,</span> <span class="n">gvadep</span><span class="p">]</span><span class="o">=</span><span class="n">getvol</span><span class="p">(</span><span class="n">mlong</span><span class="p">,</span><span class="n">mlatg</span><span class="p">,</span><span class="n">deg2km</span><span class="p">,</span><span class="n">mthick</span><span class="p">,</span><span class="n">mask</span><span class="p">)</span>
+<span class="n">Can</span> <span class="n">have</span> <span class="n">more</span> <span class="n">than</span> <span class="n">one</span> <span class="nb">input</span> <span class="n">argument</span> <span class="ow">and</span><span class="o">/</span><span class="ow">or</span> <span class="n">output</span> <span class="n">argument</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span>
+<span class="n">Matching</span> <span class="n">the</span> <span class="n">order</span> <span class="n">of</span> <span class="n">multiple</span> <span class="nb">input</span><span class="o">/</span><span class="n">output</span> <span class="n">arguments</span> <span class="ow">is</span> <span class="n">critical</span> <span class="n">when</span> <span class="n">calling</span> <span class="n">the</span> <span class="n">function</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">main</span> <span class="n">script</span>
+<span class="n">function</span> <span class="n">keyword</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="slide-2">
+<h1>Slide 2<a class="headerlink" href="#slide-2" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">H1</span> <span class="n">Lines</span> <span class="ow">and</span> <span class="n">Help</span>
+<span class="n">function</span> <span class="n">y</span> <span class="o">=</span> <span class="n">poly3</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="o">%</span>
+<span class="o">%</span> <span class="n">Evaluates</span> <span class="n">a</span> <span class="n">cubic</span> <span class="n">polynomial</span> <span class="n">y</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">c</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">3</span>
+<span class="o">%</span> <span class="n">where</span> <span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">2</span>
+<span class="o">%</span>
+<span class="o">%</span> <span class="n">Input</span><span class="p">:</span>    <span class="n">x</span>
+<span class="o">%</span> <span class="n">Output</span><span class="p">:</span>   <span class="n">y</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">c</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">3</span>
+<span class="o">%</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">etc</span>
+<span class="n">The</span> <span class="n">H1</span> <span class="n">Lines</span> <span class="n">are</span> <span class="n">the</span> <span class="n">comment</span> <span class="n">block</span> <span class="n">immediately</span> <span class="n">after</span> <span class="n">function</span> <span class="n">definition</span> <span class="n">line</span><span class="p">,</span> <span class="n">before</span> <span class="n">first</span> <span class="n">line</span> <span class="n">of</span> <span class="n">the</span> <span class="n">code</span><span class="o">.</span>  
+
+<span class="n">They</span> <span class="n">should</span> <span class="n">explain</span> <span class="n">what</span> <span class="n">the</span> <span class="n">function</span> <span class="n">does</span><span class="p">,</span> <span class="n">the</span> <span class="nb">input</span> <span class="ow">and</span> <span class="n">output</span> <span class="n">arguments</span> <span class="ow">and</span> <span class="nb">any</span> <span class="n">checks</span> <span class="n">that</span> <span class="n">are</span> <span class="n">performed</span><span class="o">.</span>
+
+<span class="n">They</span> <span class="n">appear</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">command</span> <span class="n">window</span> <span class="n">when</span> <span class="n">you</span> <span class="nb">type</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span>
+<span class="o">&gt;&gt;</span> <span class="n">help</span> <span class="n">poly3</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="slide-3">
+<h1>Slide 3<a class="headerlink" href="#slide-3" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Function Body
+function y = poly3(x)
+%
+% Evaluates a cubic polynomial y = a*x + b*x^2 + c*x^3
+% where a=1, b=-1, c=2
+%
+% Input:    x
+% Output:   y = a*x + b*x^2 + c*x^3
+%
+a = 1;
+b = -1;
+c = 2;
+y = a*x + b*x^2 + c*x^3;⁣
+end
+a, b, c, x, y are local variables
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="slide-4">
+<h1>Slide 4<a class="headerlink" href="#slide-4" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">Worksheet</span> <span class="mi">1</span>
+<span class="n">Exercise</span> <span class="mi">1</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="slide-5">
+<h1>Slide 5<a class="headerlink" href="#slide-5" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Function Call from Main Script
+t=12;
+a = poly3(t)
+Note that the variables in the main script can have either the same (mthick, mask) OR different (e.g., vol1, dep1, lon, lat,d2km) names from inside the function.  This brings us to the topic of how arguments are passed from the script to a function….
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="slide-6">
+<h1>Slide 6<a class="headerlink" href="#slide-6" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">Worksheet</span> <span class="mi">1</span>
+<span class="n">Exercise</span> <span class="mi">2</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="slide-7">
+<h1>Slide 7<a class="headerlink" href="#slide-7" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Returning from a Function
+A function returns control to the main script when the first of the following occur:
+The end of the code is reached
+The word “return” is reached
+The word “error” is reached
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="slide-8">
+<h1>Slide 8<a class="headerlink" href="#slide-8" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">Worksheet</span> <span class="mi">1</span>
+<span class="n">Exercise</span> <span class="mi">3</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="slide-9">
+<h1>Slide 9<a class="headerlink" href="#slide-9" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">Subfunctions</span>
+<span class="n">Subfunctions</span> <span class="n">are</span> <span class="n">a</span> <span class="n">method</span> <span class="n">to</span> <span class="n">further</span> <span class="n">simplify</span> <span class="n">your</span> <span class="n">code</span>
+<span class="n">They</span> <span class="n">are</span> <span class="n">limited</span> <span class="ow">in</span> <span class="n">scope</span> <span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span> <span class="n">can</span> <span class="n">only</span> <span class="n">be</span> <span class="n">called</span> <span class="n">by</span> <span class="n">the</span> <span class="n">parent</span> <span class="n">function</span> <span class="p">(</span><span class="n">main</span> <span class="n">function</span><span class="p">)</span> <span class="n">that</span> <span class="n">contains</span> <span class="n">them</span>
+<span class="n">function</span> <span class="n">fancyprint</span><span class="p">(</span><span class="n">Str</span><span class="p">)</span>
+<span class="o">%</span>
+<span class="o">%</span> <span class="n">Print</span> <span class="n">the</span> <span class="n">string</span> <span class="n">Str</span> <span class="k">with</span> <span class="o">*</span> <span class="n">at</span> <span class="n">the</span> <span class="n">beginning</span> <span class="ow">and</span> <span class="n">end</span> <span class="n">of</span>
+<span class="o">%</span> <span class="n">the</span> <span class="n">string</span><span class="o">.</span>
+<span class="o">%</span>
+<span class="n">WrappedStr</span> <span class="o">=</span> <span class="n">wrapstr</span><span class="p">(</span><span class="n">Str</span><span class="p">);</span>
+<span class="n">disp</span><span class="p">(</span><span class="n">WrappedStr</span><span class="p">);</span>
+<span class="n">function</span> <span class="n">Newstr</span> <span class="o">=</span> <span class="n">wrapstr</span><span class="p">(</span><span class="n">Str</span><span class="p">)</span>
+<span class="n">Newstr</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span><span class="p">;</span>
+<span class="n">Newstr</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">length</span><span class="p">(</span><span class="n">Str</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">Str</span><span class="p">;</span>
+<span class="n">Newstr</span><span class="p">(</span><span class="n">end</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span><span class="p">;</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="slide-10">
+<h1>Slide 10<a class="headerlink" href="#slide-10" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">Worksheet</span> <span class="mi">1</span>
+<span class="n">Exercises</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="ow">and</span> <span class="mi">6</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="slide-11">
+<h1>Slide 11<a class="headerlink" href="#slide-11" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Logical Indexing:  
+Prep for worksheet 2 on Thurs
+Recall:  mentioned during
+- week 03
+- when logical operators covered
+- when “find” covered
+Review:
+x=10*rand(1000,1);
+% pick out only values &gt; 5
+y2=x(x&gt;5);
+% could also have used “find”, but logical indexing is much faster
+ix=find(x&gt;5);
+y2=x(ix);
+
+</pre></div>
+</div>
+<!-- #region -->
+</div>
+<div class="section" id="slide-12">
+<h1>Slide 12<a class="headerlink" href="#slide-12" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">Added</span> <span class="n">pictures</span> <span class="n">to</span> <span class="n">generate</span> <span class="n">media</span> <span class="n">folder</span> <span class="n">bug</span>
+
+</pre></div>
+</div>
+<img src="media\week08_functions1-slide_12-000.png">
+<img src="media\week08_functions1-slide_12-001.png">
+<!-- #endregion -->
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By UBC<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

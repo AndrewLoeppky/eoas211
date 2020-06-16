@@ -1,0 +1,261 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Goals &#8212; EOSC 211</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/jblogo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">EOSC 211</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../../_sources/week08_broken/lab/lab_week8.md"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.md</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Source interaction buttons -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="goals">
+<h1>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h1>
+<p><span>(\bullet)</span><span> </span></p>
+<p>Turn your running median script into a function to compute a running
+median and implement various checks</p>
+<p>CODE: Function definition and help lines</p>
+<p>CODE: subfunctions</p>
+<p>CODE: function calls from a main script</p>
+<p>CODE: Useful MATLAB functions: , ,</p>
+<p>Note: Do NOT use the built-in MATLAB functions for computing running
+means and running medians in this lab.</p>
+</div>
+<div class="section" id="the-lab">
+<h1>The Lab<a class="headerlink" href="#the-lab" title="Permalink to this headline">¶</a></h1>
+<p>From the week 6 lab you should have a script to compute a running median
+and a running mean. One data set you used was contained in the file .
+You’ll use that file again here. If your code didn’t work you can use
+one of the posted solutions for that lab from the web site. If you use a
+posted solution convince yourself it works by plotting the raw data as
+well as the running mean and running median (x-axis should be the
+variable which you can display in hrs, mins using ).</p>
+<p>To make this code easier to use repeatedly, and to check for user input
+errors, we will a) turn this code into a FUNCTION, and b) add some code
+that performs INPUT CHECKS to test for inappropriate inputs, embedded in
+the function itself.</p>
+<p><span>Function: </span></p>
+<p>Turn your <code class="docutils literal notranslate"><span class="pre">runmean</span></code> script into a function called that takes ONLY two
+input arguments ( and , IN THAT ORDER), computes ONLY the
+<span><strong>running median</strong></span>, and returns ONLY , a vector containing
+the running median. Provide comment lines to explain how you dealt with
+the ends of your array. Make sure your function contains the H1 line,
+indicating the function usage, and the input and output arguments.</p>
+<p><span>Script: </span></p>
+<p>Write a short script called to (1) load the GPS data file, (2) call the
+running median function using input data and a window length of 7, and
+(3) plot in the same figure the raw velocity data and your running
+median (This script should be a lot like from the week 6 lab). Check
+that the running median is working correctly by examining your plot.</p>
+<p>It is fun (and realistic) to use the aircraft GPS data to test your
+algorithm. However, one problem with this is that rather subtle problems
+can get missed by a quick visual check because the data is somewhat
+noisy already. You can (and should, if possible) also always test
+algorithms with test data that you make up yourself. Here’s an example
+of a test data set that we used to grade your week 6 lab script. Try
+using it for debugging:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="o">.</span><span class="mi">025</span><span class="p">:</span><span class="mi">1</span><span class="p">];</span>    <span class="o">%</span> <span class="n">parabolic</span> <span class="n">shape</span> <span class="n">shows</span> <span class="n">issues</span> <span class="k">with</span> <span class="n">window</span> <span class="s1">&#39;centering&#39;</span><span class="p">,</span> 
+                  <span class="o">%</span> <span class="n">also</span> <span class="n">shows</span> <span class="n">scaling</span> <span class="n">problems</span>
+<span class="n">invec</span><span class="o">=-</span><span class="n">y</span><span class="o">.^</span><span class="mi">2</span><span class="p">;</span>      <span class="o">%</span> <span class="n">Predictable</span> <span class="n">shape</span> <span class="n">at</span> <span class="n">ends</span> <span class="n">makes</span> <span class="n">problems</span> <span class="ow">in</span> 
+                  <span class="o">%</span> <span class="n">end</span><span class="o">-</span><span class="n">handling</span> <span class="n">easier</span> <span class="n">to</span> <span class="n">see</span>
+<span class="n">invec</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>       <span class="o">%</span> <span class="n">make</span> <span class="n">end</span> <span class="n">different</span> <span class="p">(</span><span class="n">helps</span> <span class="n">w</span><span class="o">/</span> <span class="n">end</span> <span class="n">effects</span><span class="p">)</span>
+<span class="n">invec</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>      <span class="o">%</span> <span class="n">Single</span> <span class="n">spike</span> <span class="n">filtered</span> <span class="n">out</span> <span class="n">by</span> <span class="n">median</span> <span class="nb">filter</span>
+<span class="n">invec</span><span class="p">([</span><span class="mi">55</span><span class="p">:</span><span class="mi">60</span><span class="p">])</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="o">%</span> <span class="o">...</span><span class="n">but</span> <span class="n">longer</span> <span class="n">step</span> <span class="ow">is</span> <span class="ow">not</span> <span class="p">(</span><span class="k">for</span> <span class="n">small</span> <span class="n">window</span> <span class="n">lengths</span><span class="p">)</span>
+                  <span class="o">%</span> <span class="n">single</span> <span class="n">spike</span> <span class="ow">and</span> <span class="n">step</span> <span class="n">also</span> <span class="n">have</span> <span class="s1">&#39;nice&#39;</span> <span class="n">properties</span> <span class="k">for</span> 
+                  <span class="o">%</span> <span class="o">...</span><span class="n">running</span> <span class="n">mean</span>
+<span class="n">winlen</span><span class="o">=</span><span class="mi">11</span><span class="p">;</span>         
+<span class="n">t</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="n">length</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>     
+</pre></div>
+</div>
+<p><span>Subfunction: </span></p>
+<p>Write a subfunction called that is called by and does some INPUT CHECKS
+before starting with the calculations. Input checks are various tests on
+the inputs to see if they will cause problems in the later calculations.
+The code for should be physically written in the same file as (see
+example of subfunction in your textbook). The subfunction should print a
+message indicating the nature of the problem and should stop the program
+if:</p>
+<p><span>(\bullet)</span><span> </span></p>
+<p>is not a column or row vector.</p>
+<p>is shorter than .</p>
+<p>is even.</p>
+<p>is less than 3.</p>
+<p><span><em>Hint:</em></span> The built-in MATLAB functions and might be useful
+in logical tests.</p>
+<p>The built-in MATLAB function is key for these kinds of checks, because
+it can be used to print an informative error message AND stop the
+program. Type to understand why. REMEMBER to test your code by trying
+out “wrong” scenarios – e.g., check that you get the correct error
+message if you use an even # for in a call to .</p>
+</div>
+<div class="section" id="to-hand-in">
+<h1>To Hand In<a class="headerlink" href="#to-hand-in" title="Permalink to this headline">¶</a></h1>
+<p>Submit your function via Connect by 4pm on Friday. I will run it using a
+script that  loads a data file and I will check that (1) the running
+median is implemented properly (I will check  this by plotting the raw
+and running median data), (2) your function returns the appropriate
+error messages if I attempt to run it with the wrong input (e.g., if I
+attempt to use an even number for ).</p>
+<p>As usual comment your code and add the following info AS A COMMENT at
+the bottom of the function header comment:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>%  partner.name=  &#39;YYYYYY&#39;;
+%  Time_spent=   XX   hours
+</pre></div>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By UBC<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>
