@@ -1,0 +1,461 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Week 2: Steps In Problem Solving &amp; Some MATLAB Basics &#8212; EOSC 211</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/jblogo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">EOSC 211</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../_sources/week02/week02_Class2_AlgorithmSteps.md"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.md</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Source interaction buttons -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#concepts" class="nav-link">Concepts:</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#reading-for-next-week" class="nav-link">Reading for next week:</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#ta-hours-eos-main-203" class="nav-link">TA hours, EOS-Main 203</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#types-of-action-in-algorithm" class="nav-link">Types of Action in Algorithm</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#case-sensitivity" class="nav-link">Case Sensitivity</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#review-from-lab" class="nav-link">Review from Lab</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#review-from-lab-cont-d" class="nav-link">Review from Lab cont’d</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#arrays-in-matlab" class="nav-link">Arrays in MATLAB</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#arrays-and-plotting" class="nav-link">Arrays and Plotting</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#arrays-and-plotting-cont-d" class="nav-link">Arrays and Plotting cont’d</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#defining-new-arrays" class="nav-link">Defining new arrays</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#using-built-in-functions" class="nav-link">Using Built-In Functions</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#why-arrays-and-built-in-functions-are-slick" class="nav-link">Why Arrays and Built-In Functions are Slick:</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#finding-the-largest-earthquake-br" class="nav-link">Finding the Largest Earthquake <br></a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="week-2-steps-in-problem-solving-some-matlab-basics">
+<h1>Week 2:  Steps In Problem Solving &amp; Some MATLAB Basics<a class="headerlink" href="#week-2-steps-in-problem-solving-some-matlab-basics" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="concepts">
+<h2>Concepts:<a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Review variable assignment, structural elements of MATLAB</p></li>
+<li><p>Identify 6 types of action involved in algorithm</p></li>
+<li><p>Rreview of arrays (link to lab 1)</p></li>
+<li><p>Use built-in functions (link to lab 1)</p></li>
+</ul>
+<div class="section" id="reading-for-next-week">
+<h3>Reading for next week:<a class="headerlink" href="#reading-for-next-week" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>For Tues: pg. 35-40 (review), 40-60, 266-267 <br>
+There will be a quiz on the material on pages 35-60. <br>
+For lab:pg. 443-456 <br>
+For Thurs: pg. 60-69</p>
+</div></blockquote>
+</div>
+<div class="section" id="ta-hours-eos-main-203">
+<h3>TA hours, EOS-Main 203<a class="headerlink" href="#ta-hours-eos-main-203" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Make sure to note these carefully! <br>
+Thurs (wks 3,4,5,6,8,9,10,11): 9:30am – 10:30am <br>
+Mon (wks 7,10 only): 11:00am – noon <br></p>
+</div></blockquote>
+<p><strong>Lab due on Canvas by 4pm Friday</strong></p>
+</div>
+</div>
+<div class="section" id="types-of-action-in-algorithm">
+<h2>Types of Action in Algorithm<a class="headerlink" href="#types-of-action-in-algorithm" title="Permalink to this headline">¶</a></h2>
+<p>Use example from last time, maximum earthquake magnitude</p>
+<p>Types of Actions:</p>
+<ul class="simple">
+<li><p>Input</p></li>
+<li><p>Operation</p></li>
+<li><p>Selection</p></li>
+<li><p>Repetition</p></li>
+<li><p>Output</p></li>
+<li><p>Stop</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1.  read mag1
+2.  read mag2
+3.  Is mag2 &gt; mag1  ?
+3a.	YES:  biggest = mag2
+3b.	NO:   biggest = mag1
+4.  read mag3
+5.  Is mag3 &gt; biggest  ?
+5a.	YES:  biggest = mag3
+5b.	NO:    don’t need to update biggest
+
+Loop over 4-5b until reach end of list
+write out biggest
+</pre></div>
+</div>
+</div>
+<div class="section" id="case-sensitivity">
+<h2>Case Sensitivity<a class="headerlink" href="#case-sensitivity" title="Permalink to this headline">¶</a></h2>
+<p>Question: what happens when…</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">IF</span> <span class="p">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="o">&gt;&gt;</span> <span class="k">if</span> <span class="p">=</span> <span class="mi">2</span><span class="p">;</span>
+??? <span class="k">if</span> <span class="p">=</span> <span class="mi">2</span><span class="p">;</span>
+       <span class="o">|</span>
+<span class="n">Error</span><span class="p">:</span> <span class="n">The</span> <span class="n">expression</span> <span class="n">to</span> <span class="n">the</span> <span class="n">left</span> <span class="n">of</span> <span class="n">the</span> <span class="n">equals</span> <span class="nb">sign</span> <span class="n">is</span> <span class="n">not</span> <span class="n">a</span> <span class="n">valid</span> <span class="n">target</span> <span class="k">for</span> <span class="n">an</span> <span class="n">assignment</span><span class="p">.</span>
+</pre></div>
+</div>
+<p>What went wrong?  I tried to use <code class="docutils literal notranslate"><span class="pre">if</span></code> as a variable name, BUT
+<code class="docutils literal notranslate"><span class="pre">if</span></code> is a reserved word so I cannot redefine it.
+Because MATLAB is case sensitive I AM allowed to do this.
+However, it is very bad programming practice</p>
+</div>
+<div class="section" id="review-from-lab">
+<h2>Review from Lab<a class="headerlink" href="#review-from-lab" title="Permalink to this headline">¶</a></h2>
+<p>Variable Assignment <br>
+Worksheet A: What is the output of this code snipped?
+Worksheet B:  Identify variables etc</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% radius of Earth in km</span>
+<span class="n">radius</span> <span class="p">=</span> <span class="mi">6371</span><span class="p">;</span>
+<span class="n">area</span> <span class="p">=</span> <span class="mi">4</span><span class="o">*</span><span class="nb">pi</span><span class="o">*</span><span class="n">radius</span><span class="o">*</span><span class="n">radius</span><span class="p">;</span>
+<span class="c">% radius of Moon in km</span>
+<span class="n">radius</span> <span class="p">=</span> <span class="mi">1739</span><span class="p">;</span>
+<span class="n">area</span> <span class="p">=</span> <span class="mi">4</span><span class="o">*</span><span class="nb">pi</span><span class="o">*</span><span class="n">radius</span><span class="o">*</span><span class="n">radius</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">pi</span></code> in MATLAB returns the value of <span class="math notranslate nohighlight">\(\pi\)</span> (3.1415…) <br></p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">pi</span> <span class="p">=</span>  <span class="mi">4</span><span class="o">*</span><span class="nb">atan</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">and</span> <span class="nb">imag</span><span class="p">(</span><span class="nb">log</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="review-from-lab-cont-d">
+<h2>Review from Lab cont’d<a class="headerlink" href="#review-from-lab-cont-d" title="Permalink to this headline">¶</a></h2>
+<p>Worksheet C &amp; D:
+Arrays in MATLAB (see next week)</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">load</span> <span class="n">lab1</span>
+<span class="o">&gt;&gt;</span> <span class="n">whos</span>
+<span class="n">Name</span>                 <span class="s">Size</span>            <span class="s">Bytes</span>  <span class="s">Class</span>     <span class="s">Attributes</span>
+<span class="n">temperature</span>      <span class="s">12213x1</span>             <span class="s">97704</span>  <span class="s">double</span>
+<span class="n">time</span>             <span class="s">12213x1</span>             <span class="s">97704</span>  <span class="s">double</span>
+
+<span class="n">Temperature</span> <span class="s">12213</span> <span class="s">measurements</span>
+</pre></div>
+</div>
+<p>This is an array, dimensions 12213 by 1 <br>
+A big advantage of MATLAB is the ease of dealing with vectors and matrices</p>
+<blockquote>
+<div><p>Recall:  In lab 1 you loaded a file lab1.mat that contained 2 variables:</p>
+</div></blockquote>
+<p><strong>Analogy: Think of a table / EXCEL file:</strong> <br></p>
+<ul class="simple">
+<li><p>Each VALUE in the table is defined by its POSITION (row #, col #) <br></p></li>
+<li><p>Conversely each POSITION in the table (row #, col #) has associated with it a VALUE</p></li>
+</ul>
+</div>
+<div class="section" id="arrays-in-matlab">
+<h2>Arrays in MATLAB<a class="headerlink" href="#arrays-in-matlab" title="Permalink to this headline">¶</a></h2>
+<p>Worksheet E <br>
+Let’s look at e.g.,10 entries in a list of eq magnitudes:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">clear</span>
+<span class="o">&gt;&gt;</span> <span class="n">mags</span> <span class="p">=</span> <span class="p">[</span><span class="mf">4.2</span><span class="p">;</span> <span class="mf">4.1</span><span class="p">;</span> <span class="mf">4.1</span><span class="p">;</span> <span class="mf">4.1</span><span class="p">;</span> <span class="mf">4.3</span><span class="p">;</span> <span class="mf">4.2</span><span class="p">;</span> <span class="mf">4.3</span><span class="p">;</span> <span class="mf">4.5</span><span class="p">;</span> <span class="mf">4.0</span><span class="p">;</span> <span class="mf">4.7</span><span class="p">];</span>
+<span class="o">&gt;&gt;</span> <span class="n">whos</span>
+<span class="n">Name</span>         <span class="s">Size</span>            <span class="s">Bytes</span>  <span class="s">Class</span>     <span class="s">Attributes</span>
+<span class="n">mags</span>         <span class="s">10x1</span>                <span class="s">80</span>  <span class="s">double</span>
+<span class="o">&gt;&gt;</span> <span class="n">mags</span>
+<span class="n">mags</span> <span class="p">=</span>
+<span class="mf">4.2000</span>
+<span class="mf">4.1000</span>
+<span class="mf">4.1000</span>
+<span class="mf">4.1000</span>
+<span class="mf">4.3000</span>
+<span class="mf">4.2000</span>
+<span class="mf">4.3000</span>
+<span class="mf">4.5000</span>
+<span class="mf">4.0000</span>
+<span class="mf">4.7000</span>
+</pre></div>
+</div>
+<!-- #region -->
+</div>
+<div class="section" id="arrays-and-plotting">
+<h2>Arrays and Plotting<a class="headerlink" href="#arrays-and-plotting" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">load</span> <span class="s">lab1</span><span class="p">;</span>
+<span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span><span class="n">temperature</span><span class="p">)</span>
+<span class="n">datetick</span><span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>What has happened to make the plot? <br>
+# of points in time and temperature MUST be the same</p>
+<img src="media\week02_Class2_AlgorithmSteps-slide_6-000.png" height=300>
+<!-- #endregion -->
+<!-- #region -->
+</div>
+<div class="section" id="arrays-and-plotting-cont-d">
+<h2>Arrays and Plotting cont’d<a class="headerlink" href="#arrays-and-plotting-cont-d" title="Permalink to this headline">¶</a></h2>
+<p>What does this do?</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span><span class="n">temperature</span><span class="p">,</span><span class="n">time</span><span class="p">(</span><span class="mi">5149</span><span class="p">:</span><span class="mi">7308</span><span class="p">),</span><span class="n">temperature</span><span class="p">(</span><span class="mi">5149</span><span class="p">:</span><span class="mi">7308</span><span class="p">),</span><span class="c">....,time(9493:11700),temperature(9493:11700))</span>
+</pre></div>
+</div>
+<img src="media\week02_Class2_AlgorithmSteps-slide_7-001.png" height=300>
+<!-- #endregion -->
+<!-- #region -->
+</div>
+<div class="section" id="defining-new-arrays">
+<h2>Defining new arrays<a class="headerlink" href="#defining-new-arrays" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span><span class="n">temperature</span><span class="p">,</span><span class="n">time</span><span class="p">(</span><span class="mi">5149</span><span class="p">:</span><span class="mi">7308</span><span class="p">),</span><span class="n">temperature</span><span class="p">(</span><span class="mi">5149</span><span class="p">:</span><span class="mi">7308</span><span class="p">),</span><span class="c">....</span>
+<span class="n">time</span><span class="p">(</span><span class="mi">9493</span><span class="p">:</span><span class="mi">11700</span><span class="p">),</span><span class="n">temperature</span><span class="p">(</span><span class="mi">9493</span><span class="p">:</span><span class="mi">11700</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This is error prone if there are many commands involving the winter or summer parts of the time and temperature arrays.  So we defined new arrays:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">wtime</span> <span class="p">=</span> <span class="n">time</span><span class="p">(</span><span class="mi">5149</span><span class="p">:</span><span class="mi">7308</span><span class="p">);</span>
+<span class="n">wtemp</span> <span class="p">=</span> <span class="n">temperature</span><span class="p">(</span><span class="mi">5149</span><span class="p">:</span><span class="mi">7308</span><span class="p">);</span>
+<span class="n">stime</span> <span class="p">=</span> <span class="n">time</span><span class="p">(</span><span class="mi">9493</span><span class="p">:</span><span class="mi">11700</span><span class="p">);</span>
+<span class="n">stemp</span> <span class="p">=</span> <span class="n">temperature</span><span class="p">(</span><span class="mi">9493</span><span class="p">:</span><span class="mi">11700</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Programming Style Hint:
+Use variable names that are easy to understand and try to keep them short
+e.g. wtemp vs. winter_temperature
+See text p. 28-29 for Programming style guidelines &amp; common pitfalls</p>
+<img src="media\week02_Class2_AlgorithmSteps-slide_8-002.png" height=300>
+<!-- #endregion -->
+</div>
+<div class="section" id="using-built-in-functions">
+<h2>Using Built-In Functions<a class="headerlink" href="#using-built-in-functions" title="Permalink to this headline">¶</a></h2>
+<p>Worksheet F:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y3</span> <span class="p">=</span> <span class="n">max</span><span class="p">(</span><span class="n">mags</span><span class="p">(</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Steps:</p>
+<ul class="simple">
+<li><p>Select a subset of mag that includes the 3rd thru 8th values</p></li>
+<li><p>Calculate the maximum of these using the built-in function <code class="docutils literal notranslate"><span class="pre">max</span></code></p></li>
+<li><p>Assign the output to a variable called <code class="docutils literal notranslate"><span class="pre">y3</span></code></p></li>
+<li><p>No semi-colon so echo the value of <code class="docutils literal notranslate"><span class="pre">y3</span></code> to the screen</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Advantage of MATLAB:
+many built-in functions</p>
+</div>
+</div>
+<div class="section" id="why-arrays-and-built-in-functions-are-slick">
+<h2>Why Arrays and Built-In Functions are Slick:<a class="headerlink" href="#why-arrays-and-built-in-functions-are-slick" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="finding-the-largest-earthquake-br">
+<h3>Finding the Largest Earthquake <br><a class="headerlink" href="#finding-the-largest-earthquake-br" title="Permalink to this headline">¶</a></h3>
+<p>My algorithm that we could code up explicitly (i.e. write code that looks pretty much like this set of instructions):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>0.  load data file with magnitudes
+1.  read mag1
+2.  read mag2
+3.  Is mag2 &gt; mag1  ?
+3a.	YES:  biggest = mag2
+3b.	NO:   biggest = mag1
+4.  read mag3
+5.  Is mag3 &gt; biggest  ?
+5a.	YES:  biggest = mag3
+5b.	NO:    don’t need to update biggest
+6. Loop over 4-5b until reach end of list
+7. Write out biggest
+</pre></div>
+</div>
+<p>BUT we’ve learned we can load arrays and use them as the input to built-in functions in MATLAB: <br>
+So this can be coded in 2 lines! <br></p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% load array of earthquake magnitudes</span>
+<span class="n">load</span> <span class="s">mags</span><span class="p">;</span>
+<span class="c">% find biggest and echo to screen</span>
+<span class="n">biggest</span> <span class="p">=</span> <span class="n">max</span><span class="p">(</span><span class="n">mags</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By UBC<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

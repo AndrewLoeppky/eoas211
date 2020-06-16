@@ -1,0 +1,488 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Week 2 Day 1 &#8212; EOSC 211</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/jblogo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">EOSC 211</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../_sources/week02/week02_Class1_SyntaxOverview.md"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.md</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Source interaction buttons -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#concepts-for-todays-class" class="nav-link">Concepts for Today’s Class:</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#good-problem-solving-techniques" class="nav-link">Good Problem Solving Techniques</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#good-problem-solving-techniques-2" class="nav-link">Good Problem Solving Techniques 2</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#example" class="nav-link">Example</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#finding-the-largest-earthquake" class="nav-link">Finding the Largest Earthquake</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#finding-the-largest-earthquake-cont-d" class="nav-link">Finding the Largest Earthquake (Cont’d)</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#matlab-programming-elements-overview" class="nav-link">MATLAB:  Programming Elements (Overview)</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#lexical-elements-building-blocks" class="nav-link">Lexical Elements (Building Blocks)</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#names" class="nav-link">Names</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#operators" class="nav-link">Operators</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#lexical-elements-ii" class="nav-link">Lexical Elements II</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#syntax" class="nav-link">Syntax</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#examples-of-syntax-errors" class="nav-link">Examples of Syntax Errors</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#syntax-versus-semantics" class="nav-link">Syntax versus Semantics</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#example-of-semantics-error" class="nav-link">Example of Semantics Error</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#wrap-up" class="nav-link">Wrap Up</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#lab-overview" class="nav-link">Lab Overview</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="week-2-day-1">
+<h1>Week 2 Day 1<a class="headerlink" href="#week-2-day-1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="concepts-for-todays-class">
+<h2>Concepts for Today’s Class:<a class="headerlink" href="#concepts-for-todays-class" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Steps in problem solving</p></li>
+<li><p>MATLAB syntax: underlying structure</p></li>
+<li><p>Syntax versus semantics</p></li>
+</ul>
+<p><strong>Reading:</strong>
+See course web site for details, we’ll cover material in:</p>
+<ul class="simple">
+<li><p>pgs 6-40 (in class)</p></li>
+<li><p>pgs 3-6, 75-80, 89-101 (labs)</p></li>
+<li><p>pgs 557-564 (general reference, will show up in classes)</p></li>
+</ul>
+<p><strong>Lab:</strong>
+Bring text</p>
+<ul class="simple">
+<li><p>Labs due at 4pm on Fridays</p></li>
+<li><p>TA hours, EOS-Main 203 – make sure to note which weeks these carefully! <br></p></li>
+</ul>
+<blockquote>
+<div><p><strong>Friday</strong> (wks 3,4,5,6,8,9,10,11): 9:30 am – 10:30 am <br>
+<strong>Monday</strong> (wks 7,10 only): 11:00 am – noon* <br></p>
+</div></blockquote>
+<p>United Launch Alliance Atlas V 411 with NASA OSIRIS-REx mission lifts off from Cape Canaveral, Sept 2016</p>
+<img src="media\week02_Class1_SyntaxOverview_postclass-slide_0-000.png">
+</div>
+<div class="section" id="good-problem-solving-techniques">
+<h2>Good Problem Solving Techniques<a class="headerlink" href="#good-problem-solving-techniques" title="Permalink to this headline">¶</a></h2>
+<img src="media\week02_Class1_SyntaxOverview_postclass-slide_1-001.png" height="500">
+</div>
+<div class="section" id="good-problem-solving-techniques-2">
+<h2>Good Problem Solving Techniques 2<a class="headerlink" href="#good-problem-solving-techniques-2" title="Permalink to this headline">¶</a></h2>
+<p>We will adopt the 5-step program  (NOTE: this is more complete than the approach in the text book on page 76)</p>
+<blockquote>
+<div><ol class="simple">
+<li><p>State the problem clearly <br></p></li>
+<li><p>Describe your input and output info / data <br></p></li>
+<li><p>Write down the problem-solving procedure IN WORDS (<em>pay special attention to the logic. If possible work the problem “by hand” for a simple set of data)</em> <br></p></li>
+<li><p>Develop a MATLAB code to do (3) <br></p></li>
+<li><p>Test your code with a variety of data or different cases</p></li>
+</ol>
+</div></blockquote>
+<p><em>Example:  What was the largest earthquake in the Vancouver / Vancouver Island region in the past year?</em></p>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>http://www.iris.edu/hq/audience/public/earthquakes
+http://earthquake.usgs.gov/regional/neic/
+http://earthquakescanada.nrcan.gc.ca/index-eng.php</p>
+<p>Goal:  Find the largest earthquake in the Pacific Northwest during 08/30/2017– 08/31/2018. I have only printed out eqs w/ magnitudes larger than 4.0</p>
+<p>Write down input and output in words
+Give numeric value for the actual output. Write down the procedure you used to get your answer</p>
+<img src="media\week02_Class1_SyntaxOverview_postclass-slide_3-002.png">
+</div>
+<div class="section" id="finding-the-largest-earthquake">
+<h2>Finding the Largest Earthquake<a class="headerlink" href="#finding-the-largest-earthquake" title="Permalink to this headline">¶</a></h2>
+<p>My procedure or algorithm:</p>
+<ol class="simple">
+<li><p>Read magnitude on first line, and remember</p></li>
+<li><p>Read magnitude on second line</p></li>
+<li><p>Compare with first, and
+remember only the largest of the 2</p></li>
+<li><p>Read magnitude on the next line</p></li>
+<li><p>Compare with largest, and
+remember the largest of these two</p></li>
+<li><p>Repeat steps 4-5, until reach end of list</p></li>
+<li><p>Tell you my largest magnitude</p></li>
+</ol>
+</div>
+<div class="section" id="finding-the-largest-earthquake-cont-d">
+<h2>Finding the Largest Earthquake (Cont’d)<a class="headerlink" href="#finding-the-largest-earthquake-cont-d" title="Permalink to this headline">¶</a></h2>
+<p>My procedure or algorithm:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">read</span> <span class="s">mag1</span>
+<span class="n">read</span> <span class="s">mag2</span>
+
+<span class="n">Is</span> <span class="s">mag2</span> <span class="s">&gt;</span> <span class="s">mag1</span> <span class="s">?</span>
+    <span class="n">YES</span><span class="p">:</span>  <span class="n">biggest</span> <span class="p">=</span> <span class="n">mag2</span>
+    <span class="n">NO</span><span class="p">:</span>   <span class="n">biggest</span> <span class="p">=</span> <span class="n">mag1</span>
+
+<span class="n">read</span> <span class="s">next_mag</span>
+
+<span class="n">Is</span> <span class="s">next_mag</span> <span class="s">&gt;</span> <span class="s">biggest</span>  <span class="s">?</span>
+    <span class="n">YES</span><span class="p">:</span> <span class="n">biggest</span> <span class="p">=</span> <span class="n">next_mag</span>
+    <span class="n">NO</span><span class="p">:</span> <span class="n">don</span>’<span class="n">t</span> <span class="n">need</span> <span class="n">to</span> <span class="n">update</span> <span class="n">biggest</span>
+
+<span class="n">write</span> <span class="s">out</span> <span class="s">biggest</span>
+</pre></div>
+</div>
+<p>How do we turn this into <em>matlab</em> code?</p>
+</div>
+<div class="section" id="matlab-programming-elements-overview">
+<h2>MATLAB:  Programming Elements (Overview)<a class="headerlink" href="#matlab-programming-elements-overview" title="Permalink to this headline">¶</a></h2>
+<p><strong>The structure of MATLAB</strong> <br></p>
+<p><strong>Lexical Elements:</strong> building blocks <br></p>
+<blockquote>
+<div><p>Programming Language: <em>names, operators, special characters</em><br>
+Human Language: <em>words, symbols, punctuation</em></p>
+</div></blockquote>
+<p><strong>Syntax</strong>: a set of rules to combine lexical elements into legitimate constructs</p>
+<blockquote>
+<div><p>Programming language: <em>how to build expressions, statements,
+functions &amp; programs</em> <br>
+Human Language: <em>how to build sentences &amp; paragraphs</em></p>
+</div></blockquote>
+</div>
+<div class="section" id="lexical-elements-building-blocks">
+<h2>Lexical Elements (Building Blocks)<a class="headerlink" href="#lexical-elements-building-blocks" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="names">
+<h3>Names<a class="headerlink" href="#names" title="Permalink to this headline">¶</a></h3>
+<p><strong>Variable names:</strong> store data (e.g. our user defined variable <code class="docutils literal notranslate"><span class="pre">mag1</span></code>)<br>
+<strong>Reserved words:</strong> have a special meaning, cannot be redefined (e.g. <code class="docutils literal notranslate"><span class="pre">for</span></code>) <br>
+<strong>Function names:</strong> sequences of code (e.g. <code class="docutils literal notranslate"><span class="pre">sin()</span></code>)<br></p>
+</div>
+<div class="section" id="operators">
+<h3>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h3>
+<p><strong>Logical:</strong> e.g. <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> (text p. 20) <br>
+<strong>Arithmetic:</strong> e.g.   <code class="docutils literal notranslate"><span class="pre">+,</span> <span class="pre">-,</span> <span class="pre">*,</span> <span class="pre">/</span></code>	(text p. 12-13) <br>
+<strong>Relational:</strong> e.g. <code class="docutils literal notranslate"><span class="pre">&gt;,</span> <span class="pre">&gt;=,</span> <span class="pre">&lt;,</span> <span class="pre">&lt;=</span></code> (text p. 19) <br>
+<strong>Special characters:</strong> keyboard characters with special meaning in MATLAB.
+e.g.<code class="docutils literal notranslate"><span class="pre">;</span>&#160;&#160;&#160; <span class="pre">{}</span>&#160;&#160;&#160; <span class="pre">()</span></code></p>
+</div>
+</div>
+<div class="section" id="lexical-elements-ii">
+<h2>Lexical Elements II<a class="headerlink" href="#lexical-elements-ii" title="Permalink to this headline">¶</a></h2>
+<p>How are variables assigned in MATLAB?</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">mag1</span> <span class="p">=</span> <span class="mf">4.9</span>
+</pre></div>
+</div>
+<p>What does this do?</p>
+<ul class="simple">
+<li><p>Creates a space in memory</p></li>
+<li><p>Gives the space the name <code class="docutils literal notranslate"><span class="pre">mag1</span></code>.  We call <code class="docutils literal notranslate"><span class="pre">mag1</span></code> a <em>variable</em>.</p></li>
+<li><p>Stores the value <code class="docutils literal notranslate"><span class="pre">4.9</span></code> in that space (variable)</p></li>
+<li><p>Echoes back this information</p></li>
+</ul>
+<p>The prompt reappears:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">mag1</span> <span class="p">=</span> <span class="mf">3.7</span>
+</pre></div>
+</div>
+<!-- #region -->
+<p>overwrites <code class="docutils literal notranslate"><span class="pre">4.9</span></code> with <code class="docutils literal notranslate"><span class="pre">3.7</span></code></p>
+<p>Note: <code class="docutils literal notranslate"><span class="pre">&quot;=&quot;</span></code> does not mean = in the mathematical sense.  Instead, it means <em>“assign the number on the RHS to the variable on the LHS”</em>.
+We can do math on the RHS, mixing numbers and variables</p>
+</div>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<p>Lexical elements are combined using the set of rules known as “syntax”</p>
+<blockquote>
+<div><p>“I cdnuolt blveiee that I cluod aulacity uesdnatnrd what I was rdgnieg.”</p>
+</div></blockquote>
+<p>Important difference between human and programming languages is tolerance to syntax errors versus tolerance to spelling/grammar errors</p>
+</div>
+<div class="section" id="examples-of-syntax-errors">
+<h2>Examples of Syntax Errors<a class="headerlink" href="#examples-of-syntax-errors" title="Permalink to this headline">¶</a></h2>
+<p>Usually / often your code will not run if you make a syntax error:</p>
+<!-- #endregion -->
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">=</span><span class="mi">10</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>defined my variable x and assigned it a value of 10</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">y</span><span class="p">=</span><span class="nb">cos</span><span class="p">(</span><span class="n">x</span>
+         ↑
+<span class="n">Error</span><span class="p">:</span> <span class="n">Invalid</span> <span class="n">expression</span><span class="p">.</span> <span class="n">When</span> <span class="n">calling</span> <span class="n">a</span> <span class="k">function</span> <span class="n">or</span> <span class="n">indexing</span> <span class="n">a</span> <span class="n">variable</span><span class="p">,</span> <span class="n">use</span> <span class="n">parentheses</span><span class="p">.</span> <span class="n">Otherwise</span><span class="p">,</span> <span class="n">check</span> <span class="k">for</span> <span class="n">mismatched</span>
+<span class="n">delimiters</span><span class="p">.</span>
+</pre></div>
+</div>
+<p>trying to compute cos(x) and assign it to variable y
+??? y=cos(x <br>
+Correct: <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">cos(x)</span></code></p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">y</span><span class="p">=</span>2<span class="n">x</span>
+      ↑
+<span class="n">Error</span><span class="p">:</span> <span class="n">Invalid</span> <span class="n">expression</span><span class="p">.</span> <span class="n">Check</span> <span class="k">for</span> <span class="n">missing</span> <span class="n">multiplication</span> <span class="n">operator</span><span class="p">,</span> <span class="n">missing</span> <span class="n">or</span> <span class="n">unbalanced</span> <span class="n">delimiters</span><span class="p">,</span> <span class="n">or</span> <span class="n">other</span> <span class="n">syntax</span> <span class="n">error</span><span class="p">.</span> <span class="n">To</span>
+<span class="n">construct</span> <span class="s">matrices,</span> <span class="s">use</span> <span class="s">brackets</span> <span class="s">instead</span> <span class="s">of</span> <span class="s">parentheses.</span>
+</pre></div>
+</div>
+<p>trying to compute “2 times x” and assign it to “y”
+??? y=2x				Correct: y = 2*x (spaces around = don’t matter)</p>
+</div>
+<div class="section" id="syntax-versus-semantics">
+<h2>Syntax versus Semantics<a class="headerlink" href="#syntax-versus-semantics" title="Permalink to this headline">¶</a></h2>
+<p>When a program doesn’t work this can happen because: <br>
+SYNTAX is incorrect – e.g.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">distance</span> <span class="p">=</span> <span class="n">speed</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>multiplication (<code class="docutils literal notranslate"><span class="pre">*</span></code>) needs numbers or variables on both sides of <code class="docutils literal notranslate"><span class="pre">*</span></code></p>
+<p>SEMANTICS are incorrect – e.g.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">distance</span> <span class="p">=</span> <span class="n">speed</span> <span class="o">/</span> <span class="n">time</span>
+</pre></div>
+</div>
+<p>may or may not run but will certainly give you the wrong answer!!
+The program you wrote is not the program you meant to write!</p>
+</div>
+<div class="section" id="example-of-semantics-error">
+<h2>Example of Semantics Error<a class="headerlink" href="#example-of-semantics-error" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mag1</span> <span class="p">=</span><span class="mf">4.9</span><span class="p">;</span>
+<span class="n">mag2</span> <span class="p">=</span><span class="mf">5.3</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">mag1</span> <span class="o">&lt;</span> <span class="n">mag2</span><span class="p">)</span>
+    <span class="n">max_mag</span> <span class="p">=</span> <span class="n">mag1</span><span class="p">;</span>
+<span class="n">else</span>
+    <span class="s">max_mag</span> <span class="s">=</span> <span class="s">mag2</span><span class="p">;</span>
+<span class="n">end</span>
+</pre></div>
+</div>
+<p>Here’s a code snippet for finding the largest of 2 earthquakes.
+What is wrong?</p>
+</div>
+<div class="section" id="wrap-up">
+<h2>Wrap Up<a class="headerlink" href="#wrap-up" title="Permalink to this headline">¶</a></h2>
+<p><strong>Steps in problem solving</strong></p>
+<ol class="simple">
+<li><p>State problem clearly</p></li>
+<li><p>Define the input/output</p></li>
+<li><p>Write down algorithm by hand: ie., think the problem through</p></li>
+<li><p>Code in MATLAB</p></li>
+<li><p>Test, test, test…</p></li>
+</ol>
+<p><strong>Underlying structure of MATLAB syntax</strong></p>
+<ul class="simple">
+<li><p>building blocks: names, operators, special characters</p></li>
+</ul>
+<p><strong>Syntax versus semantics</strong></p>
+<ul class="simple">
+<li><p>syntax errors are about bugs in step 4 above</p></li>
+<li><p>semantics errors usually result from skipping step 3</p></li>
+</ul>
+<!-- #region -->
+</div>
+<div class="section" id="lab-overview">
+<h2>Lab Overview<a class="headerlink" href="#lab-overview" title="Permalink to this headline">¶</a></h2>
+<p><strong>Learning Goals:</strong></p>
+<ul class="simple">
+<li><p>Become familiar with MATLAB environment</p></li>
+<li><p>Load, plot and save data</p></li>
+<li><p>Try some simple operations</p></li>
+<li><p>Write MATLAB scripts</p></li>
+</ul>
+<img src="media\week02_Class1_SyntaxOverview_postclass-slide_15-004.png" height="300">
+<p>a) pair programming <br>
+b) need either an account, or your own version of MATLAB <br>
+c) turn in requested file on Canvas (not graded but will use later in term)</p>
+<img src="media\week02_Class1_SyntaxOverview_postclass-slide_15-003.png" height="400">
+<!-- #endregion -->
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By UBC<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,276 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>EOSC 211: Some Review plus Built-In Functions, Arrays Preview &#8212; EOSC 211</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/jblogo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">EOSC 211</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../_sources/week02/week02WS02.md"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.md</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Source interaction buttons -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#concepts" class="nav-link">CONCEPTS:</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#a-the-code-snippet-below-was-intended-to-calculate-the-surface-area-of-the-earth-and-print-the-answer-to-the-screen-what-is-the-actual-output-describe-the-quantity-in-words-of-the-code-snippet" class="nav-link">A) The code snippet below was intended to calculate the surface area of the Earth and print the answer to the screen. What is the actual output (describe the quantity in words) of the code snippet?</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#b-identify-in-the-code-snippet" class="nav-link">B) Identify in the code snippet:**</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#c-next-to-each-line-of-the-code-snippet-write-down-what-the-line-of-code-does" class="nav-link">C) Next to each line of the code snippet write down what the line of code does.</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#d-what-happens-if-i-now-type-clear" class="nav-link">D) What happens if I now type clear ?</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#e-assume-that-i-have-the-following-variable-mags-that-i-have-defined-or-loaded-in-matlab" class="nav-link">E) Assume that I have the following variable,mags, that I have defined or loaded in MATLAB</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#f-built-in-functions-assume-you-have-variable-mags-defined-above-what-is-the-output-to-the-screen-of-the-following-command-write-down-in-words-the-steps-involved-in-getting-the-output" class="nav-link">F) Built-In Functions: Assume you have variable mags defined above. What is the output to the screen of the following command? Write down in words the steps involved in getting the output.</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="eosc-211-some-review-plus-built-in-functions-arrays-preview">
+<h1>EOSC 211: Some Review plus Built-In Functions, Arrays Preview<a class="headerlink" href="#eosc-211-some-review-plus-built-in-functions-arrays-preview" title="Permalink to this headline">¶</a></h1>
+<p><strong>Name 1:</strong></p>
+<p><strong>Name 2:</strong></p>
+<div class="section" id="concepts">
+<h2>CONCEPTS:<a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Review variable assignment, structural elements of MATLAB</p></li>
+<li><p>Introduce the idea of arrays (from lab)</p></li>
+<li><p>Using built-in functions</p></li>
+</ul>
+<div class="section" id="a-the-code-snippet-below-was-intended-to-calculate-the-surface-area-of-the-earth-and-print-the-answer-to-the-screen-what-is-the-actual-output-describe-the-quantity-in-words-of-the-code-snippet">
+<h3>A) The code snippet below was intended to calculate the surface area of the Earth and print the answer to the screen. What is the actual output (describe the quantity in words) of the code snippet?<a class="headerlink" href="#a-the-code-snippet-below-was-intended-to-calculate-the-surface-area-of-the-earth-and-print-the-answer-to-the-screen-what-is-the-actual-output-describe-the-quantity-in-words-of-the-code-snippet" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% radius of Earth in km</span>
+<span class="n">radius</span> <span class="p">=</span> <span class="mi">6371</span><span class="p">;</span>
+<span class="n">area</span> <span class="p">=</span> <span class="mi">4</span><span class="o">*</span><span class="nb">pi</span><span class="o">*</span><span class="n">radius</span><span class="o">*</span><span class="n">radius</span><span class="p">;</span>
+<span class="c">% radius of Moon in km</span>
+<span class="n">radius</span> <span class="p">=</span> <span class="mi">1739</span><span class="p">;</span>
+<span class="n">area</span> <span class="p">=</span> <span class="mi">4</span><span class="o">*</span><span class="nb">pi</span><span class="o">*</span><span class="n">radius</span><span class="o">*</span><span class="n">radius</span>
+</pre></div>
+</div>
+<p>**OUTPUT IS
+______________________________</p>
+</div>
+<div class="section" id="b-identify-in-the-code-snippet">
+<h3>B) Identify in the code snippet:**<a class="headerlink" href="#b-identify-in-the-code-snippet" title="Permalink to this headline">¶</a></h3>
+<p>Variable names ___________________</p>
+<p>Functions ___________________</p>
+<p>Special characters ___________________</p>
+<p>Operators ___________________</p>
+</div>
+<div class="section" id="c-next-to-each-line-of-the-code-snippet-write-down-what-the-line-of-code-does">
+<h3>C) Next to each line of the code snippet write down what the line of code does.<a class="headerlink" href="#c-next-to-each-line-of-the-code-snippet-write-down-what-the-line-of-code-does" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="d-what-happens-if-i-now-type-clear">
+<h3>D) What happens if I now type <code class="docutils literal notranslate"><span class="pre">clear</span></code> ?<a class="headerlink" href="#d-what-happens-if-i-now-type-clear" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="e-assume-that-i-have-the-following-variable-mags-that-i-have-defined-or-loaded-in-matlab">
+<h3>E) Assume that I have the following variable,<code class="docutils literal notranslate"><span class="pre">mags</span></code>, that I have defined or loaded in MATLAB<a class="headerlink" href="#e-assume-that-i-have-the-following-variable-mags-that-i-have-defined-or-loaded-in-matlab" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">mags</span>
+
+<span class="n">mags</span> <span class="p">=</span>
+
+    <span class="mf">4.2000</span>
+    <span class="mf">4.1000</span>
+    <span class="mf">4.1000</span> 
+    <span class="mf">4.1000</span> 
+    <span class="mf">4.3000</span> 
+    <span class="mf">4.2000</span> 
+    <span class="mf">4.4000</span> 
+    <span class="mf">4.1000</span> 
+    <span class="mf">4.0000</span>
+    <span class="mf">4.7000</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">mags</span></code> is list (array) of 10 numbers. What would I type to:</p>
+<p>i) Access the magnitude in the 3<sup>rd</sup> row
+____________________</p>
+<p>ii) Define a new variable called <code class="docutils literal notranslate"><span class="pre">mags2</span></code> containing the magnitude in the
+last row: ____________________</p>
+</div>
+<div class="section" id="f-built-in-functions-assume-you-have-variable-mags-defined-above-what-is-the-output-to-the-screen-of-the-following-command-write-down-in-words-the-steps-involved-in-getting-the-output">
+<h3>F) Built-In Functions: Assume you have variable <code class="docutils literal notranslate"><span class="pre">mags</span></code> defined above. What is the output to the screen of the following command? Write down in words the steps involved in getting the output.<a class="headerlink" href="#f-built-in-functions-assume-you-have-variable-mags-defined-above-what-is-the-output-to-the-screen-of-the-following-command-write-down-in-words-the-steps-involved-in-getting-the-output" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y3</span> <span class="p">=</span> <span class="n">max</span><span class="p">(</span><span class="n">mags</span><span class="p">(</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><strong>Output is:</strong> ____________________</p>
+<p><strong>What were the steps?</strong></p>
+<p><strong>i) _________________________</strong><br>
+<strong>ii) _________________________</strong><br>
+<strong>iii) _________________________</strong><br>
+<strong>iv) _________________________</strong><br>
+<strong>v) _________________________</strong></p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By UBC<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>
