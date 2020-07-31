@@ -1,4 +1,4 @@
-# Lab 1
+# Lab Week 2
 
 ## Overview
 
@@ -43,4 +43,4 @@ By the end of the lab you should be comfortable with the following MATLAB operat
 * ```whos```, ```clear```, ```clf```, ```close```: listing & clearing variables in the workspace, clearing and closing figures
 * help: MATLAB help!
 
-<img src="">
+<img src="../_static/media_lab_w2/lab2_01.png">
