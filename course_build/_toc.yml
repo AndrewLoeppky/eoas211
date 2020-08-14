@@ -1,5 +1,6 @@
 - file: info_and_announcements
-
+  numbered: true
+  
 - file: week01/week01_title
   sections:
     - file: week01/week01
